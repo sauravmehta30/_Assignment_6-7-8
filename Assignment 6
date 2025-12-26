@@ -1,0 +1,50 @@
+Practical 6:
+Q1.print number from a to b using loop.
+code here:-
+#include <stdio.h>
+int main(){
+int a,b;
+scanf("%d %d",&a,&b);
+for(int i=a;i<=b;i++){
+printf("%d",i);}
+return 0;}
+
+Q2.Sum of even number using continue.
+code here:-
+#include<stdio.h>
+int main() {
+int n, sum = 0;
+    printf("Enter a integer: ");
+    scanf("%d", &n);
+    for(int i=1;i<=n;i++) {
+        if(i%2!=0){
+        continue; }
+        sum += i;}
+    printf("Even sum = %d", sum);
+    return 0;
+}
+
+Q3.ATM Pin authentication.
+#include <stdio.h>
+int main(){
+    int correctPIN = 1234;
+    int enteredPIN;
+    int attempts = 3;
+    while (attempts > 0)
+    {
+        printf("Enter your ATM PIN: ");
+        scanf("%d", &enteredPIN);
+        if (enteredPIN == correctPIN)
+        {
+            printf("Authentication successful! Access granted.\n");
+            return 0;
+        }
+        else
+        {
+            attempts--;
+            printf("Incorrect PIN. Attempts left: %d\n", attempts);
+        }
+    }
+    printf("Your card is blocked due to multiple incorrect attempts.\n");
+return 0;
+}
